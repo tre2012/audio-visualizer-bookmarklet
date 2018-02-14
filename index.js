@@ -1,9 +1,9 @@
 const canvas = document.createElement("canvas");
 const ctx = canvas.getContext('2d');
-canvas.resize = function() {
+(canvas.resize = function() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-}
+})()
 Object.assign(canvas.style, 
     {
         overflow: "hidden",
@@ -15,7 +15,6 @@ Object.assign(canvas.style,
     }
 )
 
-canvas.resize();
 window.addEventListener('resize', canvas.resize, false);
 document.body.appendChild(canvas)
 
