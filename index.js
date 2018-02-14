@@ -18,7 +18,26 @@ Object.assign(canvas.style,
 window.addEventListener('resize', canvas.resize, false);
 document.body.appendChild(canvas)
 
-ctx.fillStyle = "#F42";
-ctx.fillRect(0,0,200,200)
+(function draw() {
+    ctx.save();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.rotate(Date.now())
+    ctx.fillStyle = "#F42";
+    ctx.fillRect(0,0,200,200)
+    /*              Fade BG
+    ctx.save();
+    ctx.globalAlpha = 0.15;
+    ctx.globalCompositeOperation = 'destination-out';
+    ctx.fillStyle = '#FFF';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.restore();
+    */
+
+
+    ctx.restore();
+    window.requestAnimationFrame(draw);
+})();
+
+
 
 console.log("Audio Visualizer Bookmarklet successfully loaded!")
