@@ -2,13 +2,13 @@ const canvas = document.createElement("canvas");
 const ctx = canvas.getContext('2d');
 (canvas.resize = function() {
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = window.innerHeight;        
 })()
 Object.assign(canvas.style, 
     {
         overflow: "hidden",
-        width: "100vw",
-        height: "100vh",
+        width: "100%",
+        height: "100%",
         margin: 0,
         padding: 0,
         left: 0
@@ -20,9 +20,9 @@ document.body.appendChild(canvas);
 (function draw() {
     ctx.save();
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.rotate(Date.now())
-    ctx.fillStyle = "#F42";
-    ctx.fillRect(0,0,200,200)
+    ctx.translate(canvas.width/2, canvas.height/2);
+    ctx.rotate((Date.now()%1000)/500*Math.PI)
+    ctx.fillRect(-100,-100,200,200)
     /*              Fade BG
     ctx.save();
     ctx.globalAlpha = 0.15;
