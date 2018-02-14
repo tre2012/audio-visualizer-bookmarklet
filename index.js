@@ -4,13 +4,17 @@ canvas.resize = function() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 }
-canvas.style = {
-    overflow: "hidden",
-    width: "100vw",
-    height: "100vh",
-    margin: 0,
-    padding: 0,
-};
+Object.assign(canvas.style, 
+    {
+        overflow: "hidden",
+        width: "100vw",
+        height: "100vh",
+        margin: 0,
+        padding: 0,
+        left: 0
+    }
+)
+
 canvas.resize();
 window.addEventListener('resize', canvas.resize, false);
 document.body.appendChild(canvas)
