@@ -16,8 +16,7 @@ Object.assign(canvas.style,
 )
 
 window.addEventListener('resize', canvas.resize, false);
-document.body.appendChild(canvas)
-
+document.body.appendChild(canvas);
 (function draw() {
     ctx.save();
     ctx.clearRect(0, 0, canvas.width, canvas.height);
