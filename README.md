@@ -6,3 +6,5 @@ Just bookmark ths block:
 javascript:(function(){var __j=document.createElement('script');__j.setAttribute('src','//rawgithub.com/bartlettmic/audio-visualizer-bookmarklet/master/index.js');document.body.appendChild(__j);}());
 ```
 
+TO-DO:
+[ ] Don't place at bottom, just overlay with z-index
