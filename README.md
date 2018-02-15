@@ -8,3 +8,6 @@ javascript:(function(){var __j=document.createElement('script');__j.setAttribute
 
 TO-DO:
 * [x] Don't place at bottom, just overlay with z-index
+* [ ] Scrape any audio sources (designing this for youtube so check any video tags)
+* [ ] Idk, some actual visualizers? :'^)
+* [ ] Some sort of menu system, load modular visualizations per-request
