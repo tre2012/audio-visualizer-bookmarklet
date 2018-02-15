@@ -7,4 +7,4 @@ javascript:(function(){var __j=document.createElement('script');__j.setAttribute
 ```
 
 TO-DO:
-[x] Don't place at bottom, just overlay with z-index
+* [x] Don't place at bottom, just overlay with z-index
