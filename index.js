@@ -6,12 +6,15 @@ const ctx = canvas.getContext('2d');
 })()
 Object.assign(canvas.style, 
     {
+        position: "absolute",
         overflow: "hidden",
         width: "100%",
         height: "100%",
         margin: 0,
         padding: 0,
-        left: 0
+        left: 0,
+        top: 0,
+        zIndex: 16777271
     }
 )
 
