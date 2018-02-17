@@ -1,11 +1,18 @@
+var source = document.getElementsByTagName("video")[0];
+if (!source) throw new Error("Audio Visualizer Bookmarklet: No audio source currently present on webpage.")
+
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)()
+analyser = audioCtx.createAnalyser()
+analyser.connect(audioCtx.destination)
+source.connect(analyser)
+
 const canvas = document.createElement("canvas");
 const ctx = canvas.getContext('2d');
 (canvas.resize = function() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;        
 })()
-Object.assign(canvas.style, 
-    {
+Object.assign(canvas.style, {
         position: "absolute",
         overflow: "hidden",
         width: "100%",
@@ -14,7 +21,8 @@ Object.assign(canvas.style,
         padding: 0,
         left: 0,
         top: 0,
-        zIndex: 16777271
+        zIndex: 16777271,
+        pointerEvents: "none"
     }
 )
 
