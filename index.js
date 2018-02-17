@@ -1,4 +1,4 @@
-var source = document.getElementsByTagName("video")[0];
+var source = document.getElementsByTagName("video")[0] | document.getElementsByTagName("audio")[0];
 if (!source) throw new Error("Audio Visualizer Bookmarklet: No audio source currently present on webpage.")
 
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)()
