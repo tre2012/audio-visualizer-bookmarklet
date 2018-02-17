@@ -2,7 +2,8 @@ var source = document.getElementsByTagName("video")[0];
 if (!source) throw new Error("Audio Visualizer Bookmarklet: No audio source currently present on webpage.")
 
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)()
-analyser = audioCtx.createAnalyser()
+var analyser = audioCtx.createAnalyser()
+source = audioCtx.createMediaElementSource(source)
 analyser.connect(audioCtx.destination)
 source.connect(analyser)
 
