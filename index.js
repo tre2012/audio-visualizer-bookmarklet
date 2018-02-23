@@ -33,7 +33,6 @@ document.body.appendChild(canvas);
 analyser.fftSize = 256
 var bufferLength = analyser.frequencyBinCount
 var data = new Uint8Array(bufferLength)
-ctx = canvas.getContext('2d')
     // ctx.lineWidth = 0.5
 var cap = data.length * 5 / 9
 var start = parseInt(cap / 10, 10)
