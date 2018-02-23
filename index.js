@@ -38,7 +38,7 @@ var cap = data.length * 5 / 9
 var start = parseInt(cap / 10, 10)
 cap -= start
 var lines_per = 5
-var last_timestamp = Date.now()
+var last_timestamp = timestamp
 var dots = []
 for (var i = 0; i < cap; i++) dots.push(new Dot((i / cap) * 360))
 
@@ -61,6 +61,7 @@ function ellipse(theta, a, b) {
 }
 
 (canvas.draw = function() {
+    var timestamp = Date.now()
     ctx.save();
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     // ctx.translate(canvas.width/2, canvas.height/2);
@@ -83,9 +84,9 @@ function ellipse(theta, a, b) {
     const minrad = Math.min(canvas.height, canvas.width) / 6
     for (var i = 0; i < cap - 1; i++) {
         if (data[i + start] > dots[i].max_vol) dots[i].max_vol = data[i + start]
-        else if (Date.now() - last_timestamp >= 50 && dots[i].max_vol > 1) {
+        else if (timestamp - last_timestamp >= 50 && dots[i].max_vol > 1) {
             dots[i].max_vol *= 0.999
-            last_timestamp = Date.now()
+            last_timestamp = timestamp
         }
         dots[i].theta = ((i + 1) / (cap)) * Math.PI * 2 + timestamp / 8000
             // const minrad = ellipse(dots[i].theta, canvas.width / 2, canvas.height / 2)
