@@ -10,8 +10,8 @@ TO-DO:
 * [x] ~~Don't place at bottom, just overlay with z-index~~
 * [x] ~~Scrape any audio sources (designing this for youtube so check any video tags)~~
     * [ ] Check for audio tags too for versatility
+* [ ] Hide the video for visibility and performance improvement (can only think to set display: none)
     * [ ] Maybe unload on video complete?
-    * [ ] Hide the video for visibility and performance improvement (can only think to set display: none)
 * [ ] Set Canvas to dimensions of the video, on resize do the same
 * [x] ~~Some actual visualizers~~
     * [ ] Some sort of menu system, load modular visualizations per-request
