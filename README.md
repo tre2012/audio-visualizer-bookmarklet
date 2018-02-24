@@ -12,6 +12,6 @@ TO-DO:
     * [ ] Check for audio tags too for versatility
     * [ ] Maybe unload on video complete?
 * [ ] Set Canvas to dimensions of the video, on resize do the same
-* [x] ~~Idk, some actual visualizers? :'^)~~
+* [x] ~~Some actual visualizers~~
     * [ ] Some sort of menu system, load modular visualizations per-request
     * [ ] Initialize stuff so we can optimize, it runs like dung on FireFox (as usual)
