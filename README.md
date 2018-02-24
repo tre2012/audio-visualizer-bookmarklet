@@ -7,7 +7,11 @@ javascript:(function(){var __j=document.createElement('script');__j.setAttribute
 ```
 
 TO-DO:
-* [x] Don't place at bottom, just overlay with z-index
-* [ ] Scrape any audio sources (designing this for youtube so check any video tags)
-* [ ] Idk, some actual visualizers? :'^)
-* [ ] Some sort of menu system, load modular visualizations per-request
+* [x] ~~Don't place at bottom, just overlay with z-index~~
+* [x] ~~Scrape any audio sources (designing this for youtube so check any video tags)~~
+    * [ ] Check for audio tags too for versatility
+    * [ ] Maybe unload on video complete?
+* [ ] Set Canvas to dimensions of the video, on resize do the same
+* [x] ~~Idk, some actual visualizers? :'^)~~
+    * [ ] Some sort of menu system, load modular visualizations per-request
+    * [ ] Initialize stuff so we can optimize, it runs like dung on FireFox (as usual)
