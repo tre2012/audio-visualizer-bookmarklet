@@ -7,12 +7,24 @@ javascript:(function(){var __j=document.createElement('script');__j.setAttribute
 ```
 
 TO-DO:
-* [x] ~~Don't place at bottom, just overlay with z-index~~
 * [x] ~~Scrape any audio sources (designing this for youtube so check any video tags)~~
-    * [ ] Check for audio tags too for versatility
-* [ ] Hide the video for visibility and performance improvement (can only think to set display: none)
-    * [ ] Maybe unload on video complete?
-* [ ] Set Canvas to dimensions of the video, on resize do the same
-* [x] ~~Some actual visualizers~~
-    * [ ] Some sort of menu system, load modular visualizations per-request
+* [x] ~~Some actual visualizers~~ Prototype works!
+    * [ ] Some sort of menu system
+    * [ ] Load modular visualizations per-request
+        * [ ] Whitelist for repo-official
+        * [ ] Ability for local visualizers???? I doubt cross-origin would allow it.
     * [ ] Initialize stuff so we can optimize, it runs like dung on FireFox (as usual)
+    * [ ] Per-visualizer customization (static dropdown?)
+* [ ] LocalStorage for settings
+    * [ ] Export/import settings
+    * [ ] Toggle saving of settings
+    * [ ] Detect first-time-run?
+    * Optional settings:
+    * [ ] Detect first run
+    * [ ] Option of floating togglebox or just keyboardshortcut
+    * [ ] Static full-screen or occupy video element
+    * [ ] Kill video for performance boost
+    * [ ] Kill visualizer on video finish
+    * [ ] Delete on refresh?
+    * [ ] Check for audio tags too
+    * [ ] Personal whitelist?
