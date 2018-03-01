@@ -20,11 +20,11 @@ TO-DO:
     * [ ] Toggle saving of settings
     * [ ] Detect first-time-run?
     * Optional settings:
-    * [ ] Detect first run
-    * [ ] Option of floating togglebox or just keyboardshortcut
-    * [ ] Static full-screen or occupy video element
-    * [ ] Kill video for performance boost
-    * [ ] Kill visualizer on video finish
-    * [ ] Delete on refresh?
-    * [ ] Check for audio tags too
-    * [ ] Personal whitelist?
+        * [ ] Detect first run
+        * [ ] Option of floating togglebox or just keyboardshortcut
+        * [ ] Static full-screen or occupy video element
+        * [ ] Kill video for performance boost
+        * [ ] Kill visualizer on video finish
+        * [ ] Delete on refresh?
+        * [ ] Check for audio tags too
+        * [ ] Personal whitelist?
