@@ -20,7 +20,6 @@ TO-DO:
     * [ ] Toggle saving of settings
     * [ ] Detect first-time-run?
     * Optional settings:
-        * [ ] Detect first run
         * [ ] Option of floating togglebox or just keyboardshortcut
         * [ ] Static full-screen or occupy video element
         * [ ] Kill video for performance boost
