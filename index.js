@@ -33,7 +33,7 @@ document.body.appendChild(canvas);
 analyser.fftSize = 512
 var bufferLength = analyser.frequencyBinCount
 var data = new Uint8Array(bufferLength)
-   
+
 // ctx.lineWidth = 0.5
 // var cap = data.length * 5 / 9
 // var start = parseInt(cap / 10, 10)
@@ -65,26 +65,27 @@ function spectrum(canvas, ctx, width, scale) {
     const halfWidth = Math.floor(canvas.width / 2)
     const halfHeight = Math.floor(canvas.height / 2)
     ctx.beginPath()
-    for(let horizontal = 1; horizontal > -2; horizontal -= 2) {
-      for(let vertical = 1; vertical > -2; vertical -= 2) {
-        ctx.moveTo(halfWidth, halfHeight)
-        for(let i = 0; i < bufferLength; i++) {
-          let rawHeight = data[i] / 256
-          rawHeight = Math.pow(rawHeight, 5)
-          const height = (halfHeight * rawHeight) * vertical
-          ctx.lineTo(halfWidth + (width / 2 * i) * horizontal, halfHeight - height * scale)
+    for (let horizontal = 1; horizontal > -2; horizontal -= 2) {
+        for (let vertical = 1; vertical > -2; vertical -= 2) {
+            ctx.moveTo(halfWidth, halfHeight)
+            for (let i = 0; i < bufferLength; i++) {
+                let rawHeight = data[i] / 256
+                rawHeight = Math.pow(rawHeight, 5)
+                const height = (halfHeight * rawHeight) * vertical
+                ctx.lineTo(halfWidth + (width / 2 * i) * horizontal, halfHeight - height * scale)
+            }
         }
-      }
     }
+    ctx.closePath()
     ctx.fill()
-  }
+}
 
 (canvas.draw = function() {
     var timestamp = Date.now()
-    // ctx.save();
-    // ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
-    
+        // ctx.save();
+        // ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+
     // ctx.translate(canvas.width/2, canvas.height/2);
     // ctx.rotate((Date.now()%1000)/500*Math.PI)
     // ctx.fillRect(-100,-100,200,200)
@@ -103,8 +104,8 @@ function spectrum(canvas, ctx, width, scale) {
     ctx.drawImage(canvas, -10, 0, canvas.width + 20, canvas.height)
         // darken it
     ctx.globalCompositeOperation = 'multiply'
-    ctx.fillStyle = '#EEE'
-    ctx.fillRect(0, 0, canvas.width, canvas.height)
+    // ctx.fillStyle = '#EEE'
+    // ctx.fillRect(0, 0, canvas.width, canvas.height)
     const width = parseInt(bufferLength * 5 / 6, 10)
     const scaledWidth = ((canvas.width - width) / width)
     ctx.globalCompositeOperation = 'source-over'
