@@ -61,7 +61,7 @@ var data = new Uint8Array(bufferLength)
 //     return ((a / 2) * (b / 2)) / Math.sqrt(Math.pow((b / 2) * Math.sin(theta), 2) + Math.pow((a / 2) * Math.cos(theta), 2))
 // }
 
-function spectrum(canvas, ctx, width, scale) {
+function spectrum(width, scale) {
     const halfWidth = Math.floor(canvas.width / 2)
     const halfHeight = Math.floor(canvas.height / 2)
     ctx.beginPath()
