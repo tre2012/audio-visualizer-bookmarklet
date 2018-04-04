@@ -110,9 +110,9 @@ function spectrum(width, scale) {
     const scaledWidth = ((canvas.width - width) / width)
     ctx.globalCompositeOperation = 'source-over'
     ctx.fillStyle = 'hsl(' + timestamp / 60 + ',100%,50%)'
-    spectrum(canvas, ctx, scaledWidth, 1)
+    spectrum(scaledWidth, 1)
     ctx.fillStyle = '#000'
-    spectrum(canvas, ctx, scaledWidth, 0.6)
+    spectrum(scaledWidth, 0.6)
 
 
     // analyser.getByteFrequencyData(data)
