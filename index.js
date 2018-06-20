@@ -1,4 +1,4 @@
-var source = document.getElementsByTagName("video")[0];
+var source = document.querySelector("video, audio");
 if (!source) throw new Error("Audio Visualizer Bookmarklet: No audio source currently present on webpage.")
 
 const audioCtx = new(window.AudioContext || window.webkitAudioContext)()
@@ -31,15 +31,15 @@ Object.assign(canvas.style, {
 document.body.appendChild(canvas);
 
 analyser.fftSize = 256
-var bufferLength = analyser.frequencyBinCount
-var data = new Uint8Array(bufferLength)
+const bufferLength = analyser.frequencyBinCount
+const data = new Uint8Array(bufferLength)
     // ctx.lineWidth = 0.5
 var cap = data.length * 5 / 9
-var start = parseInt(cap / 10, 10)
+const start = parseInt(cap / 10, 10)
 cap -= start
-var lines_per = 5
-var last_timestamp = Date.now()
-var dots = []
+const lines_per = 5
+const last_timestamp = Date.now()
+const dots = []
 for (var i = 0; i < cap; i++) dots.push(new Dot((i / cap) * 360))
 
 
