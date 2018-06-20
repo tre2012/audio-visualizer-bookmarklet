@@ -16,7 +16,7 @@ window.addEventListener('resize', canvas.resize, false);
 const ctx = canvas.getContext('2d');
 
 Object.assign(canvas.style, {
-    position: "absolute",
+    position: "fixed",
     overflow: "hidden",
     width: "100%",
     height: "100%",
