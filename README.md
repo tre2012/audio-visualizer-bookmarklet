@@ -1,6 +1,6 @@
 Bookmarklet for injecting WebGL Canvas on current web-page and visualizing any active HTML audio sources using JavaScript.
 
-Just bookmark ths block:
+Just bookmark this block:
 
 ```js
 javascript:fetch("//raw.githubusercontent.com/bartlettmic/audio-visualizer-bookmarklet/master/index.js").then(d => d.text()).then(eval)
