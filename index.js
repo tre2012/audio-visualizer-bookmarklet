@@ -38,7 +38,7 @@ var cap = data.length * 5 / 9
 const start = parseInt(cap / 10, 10)
 cap -= start
 const lines_per = 5
-const last_timestamp = Date.now()
+var last_timestamp = Date.now()
 const dots = []
 for (var i = 0; i < cap; i++) dots.push(new Dot((i / cap) * 360))
 
