@@ -30,7 +30,7 @@ Object.assign(canvas.style, {
 
 document.body.appendChild(canvas);
 
-analyser.fftSize = 256
+analyser.fftSize = 512
 const bufferLength = analyser.frequencyBinCount
 const data = new Uint8Array(bufferLength)
     // ctx.lineWidth = 0.5
