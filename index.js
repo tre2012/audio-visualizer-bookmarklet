@@ -91,7 +91,7 @@ function ellipse(theta, a, b) {
         dots[i].theta = ((i + 1) / (cap)) * Math.PI * 2 + timestamp / 8000
             // const minrad = ellipse(dots[i].theta, canvas.width / 2, canvas.height / 2)
         // const maxrad = ellipse(dots[i].theta, canvas.width, canvas.height) - minrad
-        dots[i].radius = minrad + Math.pow(data[i + start] / dots[i].max_vol, 3.0) * minrad*6
+        dots[i].radius = minrad + Math.pow(data[i + start] / dots[i].max_vol, 3.0) * minrad*3
         // dots[i].radius = minrad + Math.pow(data[i + start] / dots[i].max_vol, 3.0) * maxrad
         dots[i].rect()
         dots[i].hue += 0.25
