@@ -82,7 +82,7 @@ function ellipse(theta, a, b) {
     ctx.translate(canvas.width / 2, canvas.height / 2)
     ctx.rotate(Math.PI * 3 / 2)
     const minrad = Math.min(canvas.height, canvas.width) / 6
-    const restrad = Math.min(canvas.height, canvas.width) * (5/6)
+    const restrad = Math.min(canvas.height, canvas.width) * (1/3)
     for (var i = 0; i < cap - 1; i++) {
         if (data[i + start] > dots[i].max_vol) dots[i].max_vol = data[i + start]
         else if (timestamp - last_timestamp >= 50 && dots[i].max_vol > 1) {
