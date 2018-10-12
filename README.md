@@ -3,7 +3,7 @@ Bookmarklet for injecting WebGL Canvas on current web-page and visualizing any a
 Just bookmark this block:
 
 ```js
-javascript:fetch("//raw.githubusercontent.com/bartlettmic/audio-visualizer-bookmarklet/master/index.js").then(d => d.text()).then(eval)
+javascript:fetch("//raw.githubusercontent.com/tre2012/audio-visualizer-bookmarklet/master/index.js").then(d => d.text()).then(eval)
 ```
 Then go to your favorite YouTube video and click your new bookmark, then you should see some wild stuff!
 
